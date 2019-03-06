@@ -17,13 +17,5 @@ class SizeExceptionTest {
 		 
 	 }
 	 
-	 
-	 @Test
-	 public void Exception2()  throws java.lang.Exception
-	 {
-		 String Message = "Hello";
-		 
-		 SizeException e = new SizeException();
-		 
-	 }
+
 }
