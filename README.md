@@ -5,4 +5,4 @@ education markets. SagaciousMedia's products are designed to excite and educate 
 teachers/instructors.
 
 
-_Ruthvik Patel_ | _Rishab Kamshetty_ | _Radha Dhekane_ | _Neha Maiya_
+*Team Members:* *_Ruthvik Patel_* | *_Rishab Kamshetty_* | *_Radha Dhekane_* | *_Neha Maiya_*
