@@ -1,8 +1,5 @@
 package app;
-//package app;
-//import grading.*;
 import java.util.*;
-
 import grading.DropFilter;
 import grading.Filter;
 import grading.Grade;
@@ -10,8 +7,6 @@ import grading.GradingStrategy;
 import grading.SizeException;
 import grading.TotalStrategy;
 import grading.WeightedTotalStrategy;
-
-
 
 /**
  * An application for calculating the numeric grade for
@@ -29,7 +24,7 @@ import grading.WeightedTotalStrategy;
  *   1 final exam (Final) accounting for 30% of the course grade.
  * 
  * @version 1.0
- * @author  Sagacious Media
+ * @author Team B
  *
  */
 public class Gradient
@@ -65,14 +60,16 @@ public class Gradient
 		// Create the strategy for HWs
 		hwStrategy = new TotalStrategy();
 
+		
 		// Create the weights and strategy for the course grade
-		courseWeights = new HashMap<String, Double>();
-		courseWeights.put("PAs",     0.4);
-		courseWeights.put("HWs",     0.1);
-		courseWeights.put("Midterm", 0.2);
-		courseWeights.put("Final",   0.3);
-		courseStrategy = new WeightedTotalStrategy(courseWeights);
+				courseWeights = new HashMap<String, Double>();
+				courseWeights.put("PAs",     0.4);
+				courseWeights.put("HWs",     0.1);
+				courseWeights.put("Midterm", 0.2);
+				courseWeights.put("Final",   0.3);
+				courseStrategy = new WeightedTotalStrategy(courseWeights);
 
+		
 		try
 		{
 			// Put the PA grades in a List
