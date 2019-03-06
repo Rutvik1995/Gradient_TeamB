@@ -1,4 +1,5 @@
 package test;
+import grading.Missing;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
@@ -39,7 +40,7 @@ class MissingTest {
 	     double missingValue=9.0;
 	     Missing card = new Missing();
 	     
-	     assertEquals("grade",missing,card.doubleValue(null, missingValue));      
+	     assertEquals("grade",missing,card.doubleValue(null, missingValue,0.0001));      
 	     
 	 }
 	 
