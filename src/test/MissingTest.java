@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import grading.Missing;
-//implementing test cases for missing class
+//implementing test cases for missing.java
 class MissingTest {
 
 
