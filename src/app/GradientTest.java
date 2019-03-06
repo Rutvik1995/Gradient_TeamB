@@ -152,7 +152,6 @@ class GradientTest
 		// Should never get here since all keys should be valid
 	   } 
   }
- 
  static Grade parseGrade(String key, String value) throws IllegalArgumentException
 	{
 		Grade  result;
