@@ -24,7 +24,7 @@ import grading.WeightedTotalStrategy;
  *   1 final exam (Final) accounting for 30% of the course grade.
  * 
  * @version 1.0
- * @author Team B
+ * @author Sagacious Media 
  *
  */
 public class Gradient
@@ -43,8 +43,8 @@ public class Gradient
 		GradingStrategy          courseStrategy, hwStrategy, paStrategy;
 		List<Grade>              grades, hws, pas;
 		Map<String, Double>      courseWeights;
-		String score[] = {"10.0", "10.0", "5.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
-			args = score;
+		//String score[] = {"10.0", "10.0", "5.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
+			//args = score;
 
 		// Early exit
 		if ((args == null) || (args.length != 13))
