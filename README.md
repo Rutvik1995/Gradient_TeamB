@@ -1,7 +1,10 @@
 # Gradient_TeamB 
 _Ruthvik Patel_
+
 _Rishab Kamshetty_
+
 _Radha Dhekane_
+
 _Neha Maiya_
 ### CSC-234 Class project 
 SagaciousMedia is a company that develops educational hardware, software, and content for both the formal and informal
