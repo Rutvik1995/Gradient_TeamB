@@ -170,8 +170,7 @@ class GradientTest
 		catch (NumberFormatException nfe)
 		{
 			result = new Grade(key, null);
-		}
-		
+		}		
 		return result;
 	} 
 }
