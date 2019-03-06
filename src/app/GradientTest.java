@@ -1,6 +1,3 @@
-
-
-
 package app;
 
 import static org.junit.Assert.assertEquals;
@@ -30,53 +27,32 @@ class GradientTest
 	Gradient g = new   Gradient();
 
 	@Test
-	public void testMain() throws Exception 
+	public void calgrades() throws Exception 
 	{
 	   
-	   String score[] = {"10.0", "10.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "90.0", "89"};
-	   Gradient.main(new String[] {"10","67"} );
+		String [] args = {"10.0", "10.0", "5.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
+	      Gradient.main(args);
 	   
 			
 		}
 		
 	@Test
-	public void constructor_Incorrect() throws Exception
+	public void constructor_null() throws Exception
     {
-		 String score[] = {"10.0"};
-		int x= score.length;
-		Gradient.main(null);		
+		 String args[] = {"10.0"};
+		 double len= args.length;
+		 Gradient.main(len);		
     }
 	
 	@Test
     public void getKey()
     {
-        //double       balance;        
-        //GiftCard     card;
-        //int          issuingStore;
         double value=56.98;
         String key ="str";
         Grade card = new Grade(key);
         
         assertEquals("grade",key, card.getKey());      
     }
- 
- @Test
- public void getValue()
-    {
-        //double       balance;        
-        //GiftCard     card;
-        //int          issuingStore;
-        double value=56.98;
-        String key ="str";
-        Grade card = new Grade(key,value);
-        
-        assertEquals("grade",value, card.getValue(),0.0001);      
-    }
-
- 
- 
-
- 
  
  @Test
  public void Exception()  throws java.lang.Exception
@@ -88,56 +64,12 @@ class GradientTest
  }
  
  
- @Test
- public void Exception2()  throws java.lang.Exception
- {
-	 String Message = "Hello";
-	 
-	 SizeException e = new SizeException();
-	 
- }
- 
- 
- 
- public void drop()  throws java.lang.Exception
- {
-	// String Message = "Hello";
-	 
-	 DropFilter  e = new DropFilter(true,false);
-	 
- }
- 
- 
- public void drop2()  throws java.lang.Exception
- {
-	// String Message = "Hello";
-	 
-	 DropFilter  e = new DropFilter();
-	 
- }
- 
- @Test
- public void applyTest2() throws SizeException
- {
-	 
-	 List<Grade>  grades = null;
-	 
-  
-     DropFilter  e = new DropFilter();
-	 
-     
-     assertEquals("grade",grades,e.apply(grades));      
-     //assertEquals("grade",number,card.doubleValue(number, 
-	
- }
- 
- 
  
  @Test
  public void applyTest() throws SizeException
  {
 	 
-	 Filter                   paFilter;        
+	    Filter                      paFilter;        
 		Grade                    courseGrade, hwGrade, paGrade;
 		GradingStrategy          courseStrategy, hwStrategy, paStrategy;
 		List<Grade>              grades, hws, pas;
@@ -188,12 +120,7 @@ class GradientTest
 			grades.add(hwGrade);
 			grades.add(parseGrade("Midterm", args[11]));
 			grades.add(parseGrade("Final",   args[12]));
-	
-	 
-	 
-	 
-	 
-	 
+		 	 
 	 
      DropFilter  e = new DropFilter();
 	 
@@ -220,8 +147,10 @@ class GradientTest
 		try
 		{
 			Double v;
-			if (value == null) v = null;
-			else v = new Double(Double.parseDouble(value));
+			if (value == null)
+				v = null;
+			else 
+				v = new Double(Double.parseDouble(value));
 			
 			result = new Grade(key, v);
 		}
@@ -231,11 +160,7 @@ class GradientTest
 		}
 		
 		return result;
-	}
- 
- 
- 
- 
+	} 
 
 
 }

@@ -144,4 +144,9 @@ public class Gradient
 		
 		return result;
 	}
+
+	public static void main(double x) {
+		// TODO Auto-generated method stub
+		
+	}
 }
