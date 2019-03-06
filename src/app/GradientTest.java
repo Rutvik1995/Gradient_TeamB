@@ -43,7 +43,22 @@ class GradientTest
 		 double len= args.length;
 		 Gradient.main(len);		
     }
-	
+	@Test
+	public void test1() throws Exception  
+	{
+		
+        String [] args = {null, "10.0", "5.0", null, "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
+        Gradient.main(args);
+        
+    }
+	@Test
+	public void test2() throws Exception  
+	{
+		
+        String [] args = {null, "10.0", "10.0", "", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
+        Gradient.main(args);
+        
+    }
 	@Test
     public void getKey()
     {
@@ -54,20 +69,20 @@ class GradientTest
         assertEquals("grade",key, card.getKey());      
     }
  
- @Test
- public void Exception()  throws java.lang.Exception
- {
+   @Test
+   public void Exception()  throws java.lang.Exception
+   {
 	 String Message = "Hello";
 	 
 	 SizeException e = new SizeException(Message);
 	 
- }
+   }
  
  
  
- @Test
- public void applyTest() throws SizeException
- {
+   @Test
+   public void applyTest() throws SizeException
+  {
 	 
 	    Filter                      paFilter;        
 		Grade                    courseGrade, hwGrade, paGrade;
@@ -128,17 +143,15 @@ class GradientTest
      assertEquals("grade",grades,e.apply(grades));      
      //assertEquals("grade",number,card.doubleValue(number, 
 	
- }catch (SizeException se)
+    }catch (SizeException se)
 		{
 		System.out.println("You entered too few valid grades.");
-	}
+	    }
 	catch (IllegalArgumentException iae)
-	{
+	   {
 		// Should never get here since all keys should be valid
-	}
- 
- 
-}
+	   } 
+  }
  
  static Grade parseGrade(String key, String value) throws IllegalArgumentException
 	{
