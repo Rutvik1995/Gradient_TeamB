@@ -174,8 +174,6 @@ class GradientTest
 		
 		return result;
 	} 
-
-
 }
 
 
