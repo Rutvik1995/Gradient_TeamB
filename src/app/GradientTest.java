@@ -154,8 +154,7 @@ class GradientTest
   }
  static Grade parseGrade(String key, String value) throws IllegalArgumentException
 	{
-		Grade  result;
-		
+		Grade  result;		
 		try
 		{
 			Double v;
