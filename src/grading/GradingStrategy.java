@@ -1,17 +1,11 @@
 package grading;
 
 import java.util.List;
-
-public interface GradingStrategy {
-
-	/*Grade gradeObj = null;
-	public static Grade calculate(List<Grade> grades)
-	{
-		return gradeObj;
-	}*/
-	
+/*
+ * Interface for GradingStrategy
+ */
+public interface GradingStrategy {	
 	
 	public Grade calculate(String courseWeight, List<Grade> grades) throws SizeException;
 		
-
 }
