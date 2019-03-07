@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import grading.Grade;
 /*
-   Test cases for Grade.java
-
+   Test cases for Grade.java=
  */
 class GradeTest
 {
