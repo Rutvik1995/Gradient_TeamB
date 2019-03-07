@@ -10,6 +10,7 @@ public class Missing {
 	
 	public double doubleValue(Double number)
 	{
+//		Compare the number to null
 		if(number != null)
 		{
 			return number;
@@ -22,12 +23,14 @@ public class Missing {
 	
 	public double doubleValue(Double number, double missingValue)
 	{
+//		Compare the number to null
 		if(number != null)
 		{
 			return number;
 		}
 		else
 		{
+//			return the missing value
 			return missingValue;
 		}
 	}
