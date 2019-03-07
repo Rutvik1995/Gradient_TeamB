@@ -3,7 +3,6 @@ import java.util.List;
 import java.lang.Exception;
 
 public class TotalStrategy implements GradingStrategy  {   
-	//implements GradingStrategy
 
 	public TotalStrategy() {}
 
@@ -32,7 +31,7 @@ public class TotalStrategy implements GradingStrategy  {
 							{
 									Total += item.getValue();
 							}
-							//gradeObject = new Grade(item.getKey(), Total);
+				
 						}
 						if(key == "PAs")
 						{
@@ -59,7 +58,7 @@ public class TotalStrategy implements GradingStrategy  {
 	}
 		
 		public static double min(List<Grade> list) {
-		     // Validates input
+		     // Validates input lists
 		     if (list == null) {
 		         throw new IllegalArgumentException("The Array must not be null");
 		     } else if (list.isEmpty()) {
