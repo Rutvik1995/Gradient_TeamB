@@ -8,25 +8,6 @@ import grading.SizeException;
 import grading.TotalStrategy;
 import grading.WeightedTotalStrategy;
 
-/**
- * An application for calculating the numeric grade for
- * a course from the grades on individual assignments.
- * 
- * This version assumes that the course is structured as follows:
- * 
- *   6 programming assignments (PAs) accounting for 40% of the course grade
- *   after the lowest grade is dropped.
- *   
- *   5 homework assignments (HWs) accounting for 10% of the course grade.
- *   
- *   1 mid-term exam (Midterm) accounting for 20% of the course grade.
- *   
- *   1 final exam (Final) accounting for 30% of the course grade.
- * 
- * @version 1.0
- * @author Sagacious Media 
- *
- */
 public class Gradient
 {
 	/**
@@ -43,8 +24,8 @@ public class Gradient
 		GradingStrategy          courseStrategy, hwStrategy, paStrategy;
 		List<Grade>              grades, hws, pas;
 		Map<String, Double>      courseWeights;
-		//String score[] = {"10.0", "10.0", "5.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
-			//args = score;
+		String score[] = {"10.0", "10.0", "5.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
+			args = score;
 
 		// Early exit
 		if ((args == null) || (args.length != 13))
