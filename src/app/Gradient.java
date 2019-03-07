@@ -1,8 +1,5 @@
 package app;
-//package app;
-//import grading.*;
 import java.util.*;
-
 import grading.DropFilter;
 import grading.Filter;
 import grading.Grade;
@@ -11,9 +8,25 @@ import grading.SizeException;
 import grading.TotalStrategy;
 import grading.WeightedTotalStrategy;
 
-
-
-
+/**
+ * An application for calculating the numeric grade for
+ * a course from the grades on individual assignments.
+ * 
+ * This version assumes that the course is structured as follows:
+ * 
+ *   6 programming assignments (PAs) accounting for 40% of the course grade
+ *   after the lowest grade is dropped.
+ *   
+ *   5 homework assignments (HWs) accounting for 10% of the course grade.
+ *   
+ *   1 mid-term exam (Midterm) accounting for 20% of the course grade.
+ *   
+ *   1 final exam (Final) accounting for 30% of the course grade.
+ * 
+ * @version 1.0
+ * @author Sagacious Media 
+ *
+ */
 public class Gradient
 {
 	/**
@@ -30,8 +43,8 @@ public class Gradient
 		GradingStrategy          courseStrategy, hwStrategy, paStrategy;
 		List<Grade>              grades, hws, pas;
 		Map<String, Double>      courseWeights;
-		String score[] = {"10.0", "10.0", "5.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
-			args = score;
+		//String score[] = {"10.0", "10.0", "5.0", "15.0", "5.0", "20.0", "20.0", "0.0", "0.0", "10.0", "15.0", "60.0", "45.0"};
+			//args = score;
 
 		// Early exit
 		if ((args == null) || (args.length != 13))
@@ -47,14 +60,16 @@ public class Gradient
 		// Create the strategy for HWs
 		hwStrategy = new TotalStrategy();
 
+		
 		// Create the weights and strategy for the course grade
-		courseWeights = new HashMap<String, Double>();
-		courseWeights.put("PAs",     0.4);
-		courseWeights.put("HWs",     0.1);
-		courseWeights.put("Midterm", 0.2);
-		courseWeights.put("Final",   0.3);
-		courseStrategy = new WeightedTotalStrategy(courseWeights);
+				courseWeights = new HashMap<String, Double>();
+				courseWeights.put("PAs",     0.4);
+				courseWeights.put("HWs",     0.1);
+				courseWeights.put("Midterm", 0.2);
+				courseWeights.put("Final",   0.3);
+				courseStrategy = new WeightedTotalStrategy(courseWeights);
 
+		
 		try
 		{
 			// Put the PA grades in a List
@@ -100,7 +115,16 @@ public class Gradient
 		}
 	}
 	
-
+	/**
+	 * Construct a Grade object from a key and a String representation of
+	 * its value. If the String representation of the value is null or not a valid
+	 * double then the resulting Grade will have a missing value.
+	 * 
+	 * @param key   The key for the Grade
+	 * @param value The String representation of the value
+	 * @return      The corresponding Grade object
+	 * @throws IllegalArgumentException if the key is invalid
+	 */
 	static Grade parseGrade(String key, String value) throws IllegalArgumentException
 	{
 		Grade  result;
@@ -119,5 +143,9 @@ public class Gradient
 		}
 		
 		return result;
+	}
+
+	public static void main(double x) {
+		// TODO Auto-generated method stub		
 	}
 }
