@@ -1,9 +1,9 @@
 package grading;
 import java.util.*;
 
-public class WeightedTotalStrategy implements GradingStrategy {
+public class WeightedTotalStrategy implements GradingStrategy 
 
-	//Map<String, Double> weights;  //= new Map<String, Double>()
+{
 	private Map<String, Double> weights;
 	private static final Double ZERO = new Double(0.0);
 	public WeightedTotalStrategy() 
@@ -14,10 +14,10 @@ public class WeightedTotalStrategy implements GradingStrategy {
 	public WeightedTotalStrategy(Map<String, Double> Totalweights, boolean ShouldIgnoreMissing)
 	{
 		weights = Totalweights;
-		//shouldIgnoreMissing = ShouldIgnoreMissing;
 	}
 	
-	public WeightedTotalStrategy(Map<String, Double> courseWeights) {
+	public WeightedTotalStrategy(Map<String, Double> courseWeights) 
+	{
 		super();
 		weights = courseWeights;
 	}
@@ -25,8 +25,8 @@ public class WeightedTotalStrategy implements GradingStrategy {
 	public Grade calculate(String key, List<Grade> grades) throws SizeException
 	{
 		// no null assumption
-		double                numerator, w;    // denominator     
-	    Double                grade, weight;
+		double  numerator, w;    // denominator     
+	    Double   grade, weight;
 	    
 		/*try {*/
 			if(grades == null || grades.isEmpty()) //grades.size() == 0) try
