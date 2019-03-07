@@ -7,9 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.junit.jupiter.api.Test;
-
 import grading.DropFilter;
 import grading.Filter;
 import grading.Grade;
@@ -17,7 +15,6 @@ import grading.GradingStrategy;
 import grading.SizeException;
 import grading.TotalStrategy;
 import grading.WeightedTotalStrategy;
-
 
 
 class DropFilterTest 
@@ -78,15 +75,10 @@ class DropFilterTest
 				grades.add(hwGrade);
 				grades.add(parseGrade("Midterm", args[11]));
 				grades.add(parseGrade("Final",   args[12]));
-		
-		 
-		 
-		 
+				 
 	     DropFilter  e = new DropFilter();
-		 
-	     
+     
 	     assertEquals("grade",grades,e.apply(grades));      
-	     //assertEquals("grade",number,card.doubleValue(number, 
 		
 	 }catch (SizeException se)
 			{
@@ -156,15 +148,11 @@ class DropFilterTest
 				grades.add(hwGrade);
 				grades.add(parseGrade("Midterm", args[11]));
 				grades.add(parseGrade("Final",   args[12]));
-		
-		 
-		 
-		 
+	
 	     DropFilter  e = new DropFilter();
 		 
-	     
 	     assertEquals("grade",grades,e.apply(grades));      
-	     //assertEquals("grade",number,card.doubleValue(number, 
+
 		
 	 }catch (SizeException se)
 			{
@@ -173,9 +161,7 @@ class DropFilterTest
 		catch (IllegalArgumentException iae)
 		{
 			// Should never get here since all keys should be valid
-		}
-	 
-	 
+		} 
 	}
 	 static Grade parseGrade(String key, String value) throws IllegalArgumentException
 		{
