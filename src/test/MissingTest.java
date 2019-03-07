@@ -6,16 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import grading.Missing;
-
+/* 
+ * Test cases for missing class
+ */
 class MissingTest {
 
 
 	 @Test
 	 public void doubleValue()
 	 {
-	     //double       balance;        
-	     //GiftCard     card;
-	     //int          issuingStore;
 	     double value=0.0;
 	     String key ="str";
 	     double number=0.0; 
@@ -32,13 +31,9 @@ class MissingTest {
 	 @Test
 	 public void doubleValue2()
 	 {
-	     //double       balance;        
-	     //GiftCard     card;
-	     //int          issuingStore;
 	     double value=0.0;
 	     String key ="str";
 	     double number=0.0; 
-	     //double missing;
 	     String missing="number";
 	     double missingValue=9.0;
 	     Missing card = new Missing();
@@ -50,14 +45,9 @@ class MissingTest {
 	 @Test
 	 public void doubleValue3()
 	 {
-	     //double       balance;        
-	     //GiftCard     card;
-	     //int          issuingStore;
 	     double missing=0.0;
 	     String key ="str";
 	     double number=0.0; 
-	     //double missing;
-	    // String missing="number";
 	     double missingValue=9.0;
 	     Missing card = new Missing();
 	     
