@@ -1,12 +1,12 @@
 package grading;
-//import grading.SizeException;
 import java.util.List;
 import java.lang.Exception;
 
-public class TotalStrategy implements GradingStrategy  {   //implements GradingStrategy
+public class TotalStrategy implements GradingStrategy  {   
+	//implements GradingStrategy
 
 	public TotalStrategy() {}
-	//GradingStrategy grdStrategy = new GradingStrategy() {
+
 		
 		public Grade calculate(String key, List<Grade> grades) throws SizeException
 		{
@@ -34,14 +34,13 @@ public class TotalStrategy implements GradingStrategy  {   //implements GradingS
 							}
 							//gradeObject = new Grade(item.getKey(), Total);
 						}
-						if(key == "PAs" && minCount(grades) > 0)
+						if(key == "PAs")
 						{
 							Total -= minDoubleList;
 						}
-					/*	if(Total > 100)
-							Total -= maxDoubleList;*/
+				
 						gradeObject = new Grade(key, Total);
-						//gradeObject.
+			
 					}
 					
 					return gradeObject;  // Grade Initialization
@@ -51,13 +50,12 @@ public class TotalStrategy implements GradingStrategy  {   //implements GradingS
 					e.printStackTrace();
 					//throw e;
 				}
-		//}
+
 				return gradeObject;
-		
-	//};
+
 	
 	
-	// test code below method to be sorted as to where to be added
+
 	}
 		
 		public static double min(List<Grade> list) {
@@ -82,18 +80,5 @@ public class TotalStrategy implements GradingStrategy  {   //implements GradingS
 		     return min;
 		 }
 		
-		public static double minCount(List<Grade> list) {
-			double min = min(list);
-			int count = 0;
-			for (int i = 1; i < list.size(); i++) {
-				if(min == list.get(i).getValue())
-				{
-					count ++;
-				}
-		}
-			return count;
-		}
-
+		
  }
-	
-	
