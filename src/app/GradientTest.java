@@ -64,11 +64,66 @@ class GradientTest
     {
         double value=56.98;
         String key ="str";
-        Grade card = new Grade(key);
-        
+        Grade card = new Grade(key);   
         assertEquals("grade",key, card.getKey());      
     }
- 
+	@Test
+	 public void getKey2() throws IllegalArgumentException
+	 {
+	     
+	     Double value=null;
+	     String key ="";
+	     Grade card2 = new Grade(key,value);
+	     
+	  // assertEquals("grade",key, card2.getKey(),0.0001);      
+	 }
+	 @Test
+	 public void getValue()
+	    {
+	        double value=56.98;
+	        String key ="str";
+	        Grade card = new Grade(key,value);
+	        
+	        assertEquals("grade",value, card.getValue(),0.0001);      
+	    }
+	 @Test
+	 public void doubleValue()
+    {
+	     double value=0.0;
+	     String key ="str";
+	     double number=0.0; 
+	     String missing="number";
+	     double missingValue=9.0;
+	     Missing card = new Missing();
+	     assertEquals("grade",number,card.doubleValue(number, missingValue),0.0001); 
+	 }
+
+	 @Test
+	 public void doubleValue2()
+	 {
+	     double value=0.0;
+	     String key ="str";
+	     double number=0.0; 
+	     String missing="number";
+	     double missingValue=9.0;
+	     Missing card = new Missing();
+	     assertEquals("grade",missing,card.doubleValue(null, missingValue));      
+
+	     //assertEquals("grade",number,card.doubleValue(number, missingValue),0.0001); 
+
+	 }
+
+	 @Test
+	 public void doubleValue3()
+	 {
+	     double missing=0.0;
+	     String key ="str";
+	     double number=0.0; 
+	     double missingValue=9.0;
+	     Missing card = new Missing();
+	     assertEquals("grade",missing,card.doubleValue(null),0.0001);      
+	 }
+	 
    @Test
    public void Exception()  throws java.lang.Exception
    {
@@ -77,8 +132,13 @@ class GradientTest
 	 SizeException e = new SizeException(Message);
 	 
    }
- 
- 
+   
+   @Test
+   public void Exception2()  throws java.lang.Exception
+   {
+ 	 String Message = "Hello";  	 
+  	 SizeException e = new SizeException(); 	 
+   }
  
    @Test
    public void applyTest() throws SizeException
@@ -119,7 +179,7 @@ class GradientTest
 			// Calculate the PA grade (after filtering)
 			paGrade = paStrategy.calculate("PAs", Filter.apply(pas));
 
-			// Put the HW grades in a List
+			// Put the HW grades in a List 
 			hws = new ArrayList<Grade>();
 			for (int i=0; i<5; i++)
 			{
@@ -152,6 +212,52 @@ class GradientTest
 		// Should never get here since all keys should be valid
 	   } 
   }
+	@Test
+	public void compareC1()
+	{
+		Grade grade1 = new Grade("H.W",10.0);
+		Grade grade2 = new Grade("H.W",null);
+		assertEquals("",-1,grade2.compareTo(grade1));
+	}
+	@Test
+	public void compareC2() 
+	{
+		
+		Grade grade3 = new Grade("H.W",null);
+		Grade grade4 = new Grade("H.W",null);
+		assertEquals(0,grade3.compareTo(grade4));	
+	}
+	@Test
+	public void compareC3() 
+	{
+		Double b = null;
+		Double c= null;
+		Grade grade5 = new Grade("H.W",null);
+		Grade grade6 = new Grade("H.W",10.0);
+		assertEquals(-1,grade5.compareTo(grade6));
+	}
+	 @Test
+		public void testIllegalException() 
+	 {
+			assertThrows( IllegalArgumentException.class, () -> { Grade grade =new Grade("",9.0); } );
+	 }
+	 @Test
+	 public void nullkey() throws IllegalArgumentException
+	 {
+		 String x="";
+		 double g=89;
+	    new Grade("",89);
+	 }
+
+	 @Test
+	 public void nul() throws IllegalArgumentException
+	 {
+		 String x="";
+		 double g=89;
+	    new Grade("");
+	 }
+	 
+
  static Grade parseGrade(String key, String value) throws IllegalArgumentException
 	{
 		Grade  result;		
@@ -172,5 +278,3 @@ class GradientTest
 		return result;
 	} 
 }
-
-
